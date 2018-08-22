@@ -81,13 +81,17 @@
 
 
 
-<meta property="og:type" content="website">
+<meta name="description" content="spring+springMVC+hibernate整合步骤如下：一.环境准备 ​    开发环境：JDK1.8，Eclipse, Mysql5.6 ​    创建maven工程,加入jar包，pom.xml文件如下： 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Sue&#39;s blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/2018/08/22/spring+springMVC+hibernate整合/index.html">
 <meta property="og:site_name" content="Sue&#39;s blog">
+<meta property="og:description" content="spring+springMVC+hibernate整合步骤如下：一.环境准备 ​    开发环境：JDK1.8，Eclipse, Mysql5.6 ​    创建maven工程,加入jar包，pom.xml文件如下： 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-03-21T11:12:20.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Sue&#39;s blog">
+<meta name="twitter:description" content="spring+springMVC+hibernate整合步骤如下：一.环境准备 ​    开发环境：JDK1.8，Eclipse, Mysql5.6 ​    创建maven工程,加入jar包，pom.xml文件如下： 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495">
 
 
 
@@ -117,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/08/22/spring+springMVC+hibernate整合/"/>
 
 
 
 
 
-  <title>Sue's blog</title>
+  <title> | Sue's blog</title>
   
 
 
@@ -142,8 +146,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -280,9 +283,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -312,9 +315,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/08/22/spring+springMVC+hibernate整合/" itemprop="url">未命名</a></h1>
+          <h1 class="post-title" itemprop="name headline"></h1>
         
 
         <div class="post-meta">
@@ -364,9 +365,7 @@
       
 
       
-        
-          
-            <h1 id="spring-springMVC-hibernate整合"><a href="#spring-springMVC-hibernate整合" class="headerlink" title="spring+springMVC+hibernate整合"></a>spring+springMVC+hibernate整合</h1><h2 id="步骤如下："><a href="#步骤如下：" class="headerlink" title="步骤如下："></a>步骤如下：</h2><p><strong>一.环境准备</strong></p>
+        <h1 id="spring-springMVC-hibernate整合"><a href="#spring-springMVC-hibernate整合" class="headerlink" title="spring+springMVC+hibernate整合"></a>spring+springMVC+hibernate整合</h1><h2 id="步骤如下："><a href="#步骤如下：" class="headerlink" title="步骤如下："></a>步骤如下：</h2><p><strong>一.环境准备</strong></p>
 <p>​    开发环境：JDK1.8，Eclipse, Mysql5.6</p>
 <p>​    创建maven工程,加入jar包，pom.xml文件如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;dependencies&gt;</span><br><span class="line"></span><br><span class="line">	&lt;dependency&gt;</span><br><span class="line">		&lt;groupId&gt;org.springframework&lt;/groupId&gt;</span><br><span class="line">		&lt;artifactId&gt;spring-context&lt;/artifactId&gt;</span><br><span class="line">		&lt;version&gt;4.2.8.Release&lt;/version&gt;</span><br><span class="line">	&lt;/dependency&gt;</span><br><span class="line">	&lt;dependency&gt;</span><br><span class="line">		&lt;groupId&gt;org.springframework&lt;/groupId&gt;</span><br><span class="line">		&lt;artifactId&gt;spring-core&lt;/artifactId&gt;</span><br><span class="line">		&lt;version&gt;4.2.8.RELEASE&lt;/version&gt;</span><br><span class="line">	&lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">	&lt;dependency&gt;</span><br><span class="line">		&lt;groupId&gt;org.springframework&lt;/groupId&gt;</span><br><span class="line">		&lt;artifactId&gt;spring-beans&lt;/artifactId&gt;</span><br><span class="line">		&lt;version&gt;4.2.8.RELEASE&lt;/version&gt;</span><br><span class="line">	&lt;/dependency&gt;</span><br><span class="line">	&lt;dependency&gt;</span><br><span class="line">		&lt;groupId&gt;org.springframework&lt;/groupId&gt;</span><br><span class="line">		&lt;artifactId&gt;spring-context-support&lt;/artifactId&gt;</span><br><span class="line">		&lt;version&gt;4.2.8.RELEASE&lt;/version&gt;</span><br><span class="line">	&lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">	&lt;dependency&gt;</span><br><span class="line">		&lt;groupId&gt;org.springframework&lt;/groupId&gt;</span><br><span class="line">		&lt;artifactId&gt;spring-expression&lt;/artifactId&gt;</span><br><span class="line">		&lt;version&gt;4.2.8.RELEASE&lt;/version&gt;</span><br><span class="line">	&lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">	&lt;dependency&gt;</span><br><span class="line">		&lt;groupId&gt;org.springframework&lt;/groupId&gt;</span><br><span class="line">		&lt;artifactId&gt;spring-test&lt;/artifactId&gt;</span><br><span class="line">		&lt;version&gt;4.2.8.RELEASE&lt;/version&gt;</span><br><span class="line">	&lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">	&lt;dependency&gt;</span><br><span class="line">		&lt;groupId&gt;org.springframework&lt;/groupId&gt;</span><br><span class="line">		&lt;artifactId&gt;spring-orm&lt;/artifactId&gt;</span><br><span class="line">		&lt;version&gt;4.2.8.RELEASE&lt;/version&gt;</span><br><span class="line">	&lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">	&lt;dependency&gt;</span><br><span class="line">		&lt;groupId&gt;org.springframework&lt;/groupId&gt;</span><br><span class="line">		&lt;artifactId&gt;spring-web&lt;/artifactId&gt;</span><br><span class="line">		&lt;version&gt;4.2.8.RELEASE&lt;/version&gt;</span><br><span class="line">	&lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">	&lt;dependency&gt;</span><br><span class="line">		&lt;groupId&gt;org.springframework&lt;/groupId&gt;</span><br><span class="line">		&lt;artifactId&gt;spring-webmvc&lt;/artifactId&gt;</span><br><span class="line">		&lt;version&gt;4.2.8.RELEASE&lt;/version&gt;</span><br><span class="line">	&lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	&lt;!--日志包 --&gt;</span><br><span class="line">	&lt;dependency&gt;</span><br><span class="line">		&lt;groupId&gt;commons-logging&lt;/groupId&gt;</span><br><span class="line">		&lt;artifactId&gt;commons-logging&lt;/artifactId&gt;</span><br><span class="line">		&lt;version&gt;1.1.2&lt;/version&gt;</span><br><span class="line">	&lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">	&lt;dependency&gt;</span><br><span class="line">		&lt;groupId&gt;log4j&lt;/groupId&gt;</span><br><span class="line">		&lt;artifactId&gt;log4j&lt;/artifactId&gt;</span><br><span class="line">		&lt;version&gt;1.2.14&lt;/version&gt;</span><br><span class="line">	&lt;/dependency&gt;</span><br><span class="line">	&lt;!--单元测试包 --&gt;</span><br><span class="line">	&lt;dependency&gt;</span><br><span class="line">		&lt;groupId&gt;junit&lt;/groupId&gt;</span><br><span class="line">		&lt;artifactId&gt;junit&lt;/artifactId&gt;</span><br><span class="line">		&lt;version&gt;4.9&lt;/version&gt;</span><br><span class="line">		&lt;scope&gt;test&lt;/scope&gt;</span><br><span class="line">	&lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">	&lt;!-- servlet相关包 --&gt;</span><br><span class="line">	&lt;dependency&gt;</span><br><span class="line">		&lt;groupId&gt;javax.servlet&lt;/groupId&gt;</span><br><span class="line">		&lt;artifactId&gt;javax.servlet-api&lt;/artifactId&gt;</span><br><span class="line">		&lt;version&gt;3.1.0&lt;/version&gt;</span><br><span class="line">		&lt;scope&gt;provided&lt;/scope&gt;</span><br><span class="line">	&lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">	&lt;!-- JSTL --&gt;</span><br><span class="line">	&lt;dependency&gt;</span><br><span class="line">		&lt;groupId&gt;javax.servlet&lt;/groupId&gt;</span><br><span class="line">		&lt;artifactId&gt;jstl&lt;/artifactId&gt;</span><br><span class="line">		&lt;version&gt;1.2&lt;/version&gt;</span><br><span class="line">	&lt;/dependency&gt;</span><br><span class="line">	</span><br><span class="line">	&lt;!-- hibernate --&gt;</span><br><span class="line">	&lt;dependency&gt;</span><br><span class="line">		&lt;groupId&gt;org.hibernate&lt;/groupId&gt;</span><br><span class="line">		&lt;artifactId&gt;hibernate-core&lt;/artifactId&gt;</span><br><span class="line">		&lt;version&gt;5.1.0.Final&lt;/version&gt;</span><br><span class="line">	&lt;/dependency&gt;</span><br><span class="line">	&lt;!-- mysql --&gt;</span><br><span class="line">	&lt;dependency&gt;</span><br><span class="line">		&lt;groupId&gt;mysql&lt;/groupId&gt;</span><br><span class="line">		&lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;</span><br><span class="line">		&lt;version&gt;5.1.40&lt;/version&gt;</span><br><span class="line">	&lt;/dependency&gt;</span><br><span class="line">	&lt;dependency&gt;</span><br><span class="line">		&lt;groupId&gt;org.hibernate&lt;/groupId&gt;</span><br><span class="line">		&lt;artifactId&gt;hibernate-c3p0&lt;/artifactId&gt;</span><br><span class="line">		&lt;version&gt;5.1.0.Final&lt;/version&gt;</span><br><span class="line">	&lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">	&lt;dependency&gt;</span><br><span class="line">		&lt;groupId&gt;com.mchange&lt;/groupId&gt;</span><br><span class="line">		&lt;artifactId&gt;c3p0&lt;/artifactId&gt;</span><br><span class="line">		&lt;version&gt;0.9.2&lt;/version&gt;</span><br><span class="line">	&lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">&lt;/dependencies&gt;</span><br></pre></td></tr></table></figure>
@@ -383,8 +382,6 @@
 <p><strong>2.在web.xml文件中加入spring监听器</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--spring监听器--&gt;</span><br><span class="line">&lt;context-param&gt;</span><br><span class="line">		&lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;</span><br><span class="line">		&lt;param-value&gt;classpath:applicationContext.xml&lt;/param-value&gt;</span><br><span class="line">&lt;/context-param&gt;</span><br><span class="line"> &lt;!-- spring监听器 --&gt;</span><br><span class="line"> &lt;listener&gt;</span><br><span class="line"> 	&lt;listener-class&gt;org.springframework.web.context.ContextLoaderListener&lt;/listener-class&gt;</span><br><span class="line"> &lt;/listener&gt;</span><br><span class="line"> </span><br><span class="line">&lt;!--spring对hibernate的Lazy的支持--&gt;</span><br><span class="line"> &lt;filter&gt;</span><br><span class="line"> 	&lt;filter-name&gt;OpenSessionInViewFilter&lt;/filter-name&gt;</span><br><span class="line"> 	&lt;filter-class&gt;org.springframework.orm.hibernate5.support.OpenSessionInViewFilter&lt;/filter-class&gt;</span><br><span class="line"> 	&lt;init-param&gt;</span><br><span class="line"> 		&lt;param-name&gt;sessionFacotryBeanName&lt;/param-name&gt;</span><br><span class="line"> 		&lt;!-- spring.xml文件中session工厂的ID值 --&gt;</span><br><span class="line"> 		&lt;param-value&gt;sessionFacotry&lt;/param-value&gt;</span><br><span class="line"> 	&lt;/init-param&gt;</span><br><span class="line"> &lt;/filter&gt;</span><br><span class="line"> &lt;filter-mapping&gt;</span><br><span class="line"> 	&lt;filter-name&gt;OpenSessionInViewFilter&lt;/filter-name&gt;</span><br><span class="line"> 	&lt;url-pattern&gt;/*&lt;/url-pattern&gt;</span><br><span class="line"> &lt;/filter-mapping&gt;</span><br></pre></td></tr></table></figure>
 
-          
-        
       
     </div>
     
@@ -401,154 +398,28 @@
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
+
       
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/22/我的第一篇文章/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Sue">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Sue's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/08/22/我的第一篇文章/" itemprop="url">我的第一篇文章</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-22T14:09:40+08:00">
-                2018-08-22
-              </time>
+              <a href="/2018/08/22/我的第一篇文章/" rel="next" title="我的第一篇文章">
+                <i class="fa fa-chevron-left"></i> 我的第一篇文章
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/搭建博客/" itemprop="url" rel="index">
-                    <span itemprop="name">搭建博客</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>使用Hexo,是非常简单的一件事。测试文本</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -558,10 +429,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -569,6 +441,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -589,8 +465,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -661,6 +546,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#spring-springMVC-hibernate整合"><span class="nav-number">1.</span> <span class="nav-text">spring+springMVC+hibernate整合</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#步骤如下："><span class="nav-number">1.1.</span> <span class="nav-text">步骤如下：</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -811,6 +712,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
